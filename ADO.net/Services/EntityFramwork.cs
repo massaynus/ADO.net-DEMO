@@ -22,12 +22,12 @@ namespace ADO.net.Services
                 new Product {name = "Milk", expirydate = getExpiryDate()},
             });
 
-            WriteInGreen($"Inserted {_database.SaveChanges()} rows");
+            WriteLineInGreen($"Inserted {_database.SaveChanges()} rows");
         }
 
         public void GetProducts()
         {
-            WriteInGreen($"Got {_database.Products.ToList().Count} rows");
+            WriteLineInGreen($"Got {_database.Products.ToList().Count} rows");
         }
 
         public void UpdateProducts()
@@ -37,13 +37,13 @@ namespace ADO.net.Services
                 .ToList()
                 .ForEach(product => product.expirydate = DateTime.Today.AddDays(7));
 
-            WriteInGreen($"Updated {_database.SaveChanges()} rows");
+            WriteLineInGreen($"Updated {_database.SaveChanges()} rows");
         }
 
         public void DeleteProducts()
         {
             _database.Products.RemoveRange(_database.Products);
-            WriteInGreen($"Deleted {_database.SaveChanges()} rows");
+            WriteLineInGreen($"Deleted {_database.SaveChanges()} rows");
         }
     }
 }

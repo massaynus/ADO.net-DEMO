@@ -60,7 +60,7 @@ namespace ADO.net.Services
                 _product.Rows.Add(row);
             }
 
-            WriteInGreen($"Inserted {_adapter.Update(_product)} rows");
+            WriteLineInGreen($"Inserted {_adapter.Update(_product)} rows");
             _product.Rows.Clear();
             _adapter.Fill(_product);
         }
@@ -69,13 +69,13 @@ namespace ADO.net.Services
         public void GetProducts()
         {
             _product.Rows.Clear();
-            WriteInGreen($"Got {_adapter.Fill(_product)} rows");
+            WriteLineInGreen($"Got {_adapter.Fill(_product)} rows");
             _form.ShowDialog();
         }
 
         public void UpdateDatabase()
         {
-            WriteInGreen($"Changed {_adapter.Update(_product)} rows");
+            WriteLineInGreen($"Changed {_adapter.Update(_product)} rows");
             _product.Rows.Clear();
             _adapter.Fill(_product);
         }

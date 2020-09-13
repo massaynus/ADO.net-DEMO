@@ -42,7 +42,7 @@ namespace ADO.net.Services
                 command.Transaction.Commit();
             }
 
-            WriteInGreen("Inserted rows");
+            WriteLineInGreen("Inserted rows");
         }
 
         public void GetProducts()
@@ -55,7 +55,7 @@ namespace ADO.net.Services
                 command.CommandText = "SELECT * FROM Product";
                 var data = new DataTable();
                 data.Load(command.ExecuteReader());
-                WriteInGreen($"Got {data.Rows.Count} rows");
+                WriteLineInGreen($"Got {data.Rows.Count} rows");
             }
         }
 
@@ -73,7 +73,7 @@ namespace ADO.net.Services
                 command.Transaction.Commit();
             }
 
-            WriteInGreen("Updated Rows");
+            WriteLineInGreen("Updated Rows");
         }
 
         public void DeleteProducts()
@@ -87,7 +87,7 @@ namespace ADO.net.Services
                 command.ExecuteNonQuery();
             }
 
-            WriteInGreen("Deleted Rows");
+            WriteLineInGreen("Deleted Rows");
         }
     }
 }

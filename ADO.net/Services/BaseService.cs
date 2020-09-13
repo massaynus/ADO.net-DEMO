@@ -8,7 +8,7 @@ namespace ADO.net.Services
 {
     public class BaseService : IExecutableTask
     {
-        protected void WriteInGreen(string text)
+        protected void WriteLineInGreen(string text)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(text);
