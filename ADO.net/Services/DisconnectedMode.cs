@@ -27,7 +27,12 @@ namespace ADO.net.Services
 
             _adapter.Fill(_product);
 
-            _form = new Form() { WindowState = FormWindowState.Maximized, Font = new Font("Century Gothic", 17.0f) };
+            _form = new Form() 
+            { 
+                WindowState = FormWindowState.Maximized, 
+                Font = new Font("Century Gothic", 17.0f) ,
+                Text = "Insert / Update or Delete datat as you wish"
+            };
             BindingSource bindingSource = new BindingSource() { DataSource = _product };
             DataGridView dgv1 = new DataGridView()
             {
