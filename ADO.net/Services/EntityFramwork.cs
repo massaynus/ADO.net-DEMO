@@ -7,7 +7,7 @@ namespace ADO.net.Services
 {
     public class EntityFramwork : BaseService
     {
-        ADODB _database = new ADODB();
+        ADODBContext _database = new ADODBContext();
 
         public void AddProducts()
         {

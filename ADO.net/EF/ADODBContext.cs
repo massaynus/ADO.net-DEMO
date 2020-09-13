@@ -5,9 +5,9 @@ namespace ADO.net.EF
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class ADODB : DbContext
+    public partial class ADODBContext : DbContext
     {
-        public ADODB()
+        public ADODBContext()
             : base("name=ADODB")
         {
         }

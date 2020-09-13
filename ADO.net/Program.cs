@@ -20,7 +20,7 @@ namespace ADO.net
 
         static void Start()
         {
-            ADODB database = new ADODB();
+            ADODBContext database = new ADODBContext();
             using (database)
             {
                 database.Database.CreateIfNotExists();
